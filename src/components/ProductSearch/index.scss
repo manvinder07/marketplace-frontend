@@ -1,0 +1,207 @@
+body {
+
+    background-color: #1d1d1d; /* Dark background */
+    color: #ffffff; /* White text for contrast */
+    font-family: 'Arial', sans-serif; /* Set a default font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    .full-page-search{
+      animation: fadeIn 0.5s ease-in-out;
+      /* Keyframes for Fade-In */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    .search-container {
+        position: absolute; /* Fix the search bar at the top of the page */
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40%; /* Set the width to half the screen */
+        height: 25px;
+        background-color: #1d1d1d; /* Light background */
+        padding: 10px 20px; /* Space around the content */
+        border-radius: 25px; /* Rounded corners */
+        border: 0.1px solid rgb(255, 255, 255); /* Black border */
+        display: flex; /* Align items in the center */
+        justify-content: space-between; /* Space between the search bar and button */
+        align-items: center; /* Vertically center the items */
+        z-index: 1000; /* Ensure it is above other content */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    }
+    
+    /* Search Bar styling */
+    .search-bar {
+    width: 50%; /* Make the search input take up most of the width */
+    background-color: transparent;
+    border: none; /* Remove the border */
+    color: rgb(255, 255, 255); /* Black text color */
+    font-family: sans-serif;
+    font-size: 15px; /* Increase font size */
+    padding: 10px 15px;
+    border-radius: 15px; /* Round the edges */
+    outline: none; /* Remove outline on focus */
+
+    
+    }
+
+    ::placeholder {
+        color: white;
+        font-size: 15px;
+        opacity: 1; /* Firefox */
+      }
+
+.product-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1d1d1d;  /* Dark background */
+    color: #ffffff;  /* White text for contrast */
+    margin-top: 65px; /* Adjusted for navbar height */
+  
+}
+  
+.sort-buttons {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  width: 100%; /* Make the container full width */
+  max-width: 1100px;
+  gap: 15px;
+  margin-top: 20px;
+  padding-right: 20px; /* Add some padding to avoid the buttons being flush with the screen edge */
+}
+
+.sort-buttons button {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: 2px solid white; /* White border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: transparent; /* Transparent background */
+  color: white; /* White text */
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #444; /* Slight background change on hover */
+    color: #f8f9fa; /* Lighter text on hover */
+    border-color: #f8f9fa; /* Lighter border on hover */
+  }
+}
+  
+    .products-container {
+      display: flex;
+      flex-wrap: wrap;
+      background: 1d1d1d(0, 0, 0);
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Increase min-width
+
+
+      a {
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+        color: #ffffff;
+        font-weight: bold;
+    
+        &:hover {
+          text-decoration: none;
+        }
+      }
+  
+      .product-card {
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        margin: 10px;
+        width: auto; /* Adjust the size of your cards */
+        max-width: 100px;
+        background-color: transparent; /* No background */
+      }
+      
+      .product-card:hover {
+        transform: scale(1.05); /* Slight scale effect on hover */
+      }
+      
+      .product-image {
+        width: 100%; /* Use the full width of the card */
+        height: auto; /* Maintain the aspect ratio */
+        border-radius: 15px; /* Round top corners */
+      }
+      
+      .product-title {
+        font-size: 14px;
+        font-family: 'Coolvetica';
+        font-weight: 50;
+        margin-top: 5px;
+        color: #ffffff; /* Title color */
+      }
+      
+      .product-price {
+        font-size: 14px;
+        font-weight: 300;
+        color: #ffffff; /* Price color */
+        margin-top: 5px;
+      }
+      
+      .product-card a {
+        text-decoration: none; /* Remove the underline */
+        color: inherit; /* Inherit text color from parent */
+      }
+      
+    }
+  
+    .no-results {
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      margin-top: 20px;
+    }
+
+    .spinner {
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid #ffffff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+        margin-bottom: 25px;
+      }
+      
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

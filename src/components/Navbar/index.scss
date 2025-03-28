@@ -1,0 +1,63 @@
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed; /* Keep the sidebar in place */
+  left: 0;
+  top: 0;
+  width: 80px; /* Adjust the width of the navbar */
+  height: 100vh; /* Full height of the screen */
+  background-color: #1a1a1a; /* Slightly lighter than black */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 10; /* Ensure it's above the content */
+}
+
+/* Logo Styling */
+.logo-container {
+  width: 80px; /* Adjust width of logo container */
+  margin-bottom: 20px; /* Space below the logo */
+}
+
+.logo {
+  width: 100%; /* Ensure logo takes up full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 80px; /* Adjust the max width to fit it within the navbar */
+  border-radius: 10px; /* Optional: adds rounded corners to logo */
+}
+/* Navigation List */
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Navigation Items */
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 15px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.nav-item:hover {
+  color: #002952; /* Highlight color */
+}
+
+.active {
+  color: #002952; /* Highlight color */
+}
+
+.active .nav-link {
+  color: #fff; /* Active link color */
+}

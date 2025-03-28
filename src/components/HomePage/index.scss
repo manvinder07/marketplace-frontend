@@ -1,0 +1,82 @@
+.home-container {
+  display: flex;
+  justify-content: space-between; /* Distribute content to both sides */
+  align-items: center; /* Vertically center the items */
+  height: 100vh; /* Full viewport height */
+  color: white; /* White text color */
+  text-align: left; /* Align text to the left */
+  padding: 0 350px;
+  background: radial-gradient(80% 50% at 50% 10%, rgb(0, 41, 82), transparent); /* Gradient background */
+  animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text-content {
+  max-width: 40%; /* Keeps the text on the left side */
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: 'Coolvetica';
+  // text-transform: uppercase; /* Modern text style */
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 0px;
+  font-weight: 300;
+  max-width: 600px; /* Controls text width */
+}
+
+.search-button {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255); /* Black border */
+  padding: 15px 30px;
+  font-style: bold;
+  font-family: 'Coolvetica';
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 5px;
+  text-transform: uppercase; /* Capitalize button text */
+
+  &:hover {
+    background-color: #ffffff; /* Darker orange on hover */
+    color: black;
+    transform: translateY(-5px); /* Slightly lift the button */
+  }
+
+  &:focus {
+    outline: none; /* Remove focus outline */
+  }
+}
+
+.search-button:active {
+  transform: translateY(0); /* Reset the hover effect when clicked */
+}
+
+.logo-container-home {
+  max-width: 40%; /* Limits the width of the logo container */
+}
+
+.logo-home {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* Controls the maximum size of the logo */
+}
